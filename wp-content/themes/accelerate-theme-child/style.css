@@ -186,17 +186,26 @@ div #nf-field-2-container, .nf-field-container, .email-container, .label-above {
 	height: 53px;
 }
 
-/** Contact Form Submission Message **/
+/** Contact Us Form Success Message **/ 
 
-#nf-form-1-cont {
+
+ #content > h3, .success {
 	text-align: center;
+	font-family: 'Montserrat';
 }
 
-#nf-form-1-cont > div > div.nf-response-msg > h2
-{
+ #content > h3 {
+	padding-top: 112px;
 	color: #45ac9d;
-	font-family: 'Montserrat';
 	font-size: 35px;
+	 font-weight: 700;
 }
+
+#content > .success {
+	padding-bottom: 500px;
+	font-size: 20px;
+}
+
+
 
 
