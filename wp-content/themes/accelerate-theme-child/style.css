@@ -38,6 +38,7 @@
 }
 
 .nav-menu ul li{
+
 	float:left;
 	margin: 0 30px;
 	text-transform:uppercase;
@@ -145,6 +146,57 @@ div.case-study-images img {
 	margin-bottom: 50px;
 	border: 1px solid #cccccc;
 
+}
+
+/** Contact Us Page **/
+#content {
+	width: 660px;
+	margin-left: 165px;
+}
+
+#content > h2, p {
+padding-left: 30px;
+} 
+
+#nf-field-1-container {
+	float: left;
+	width: 47.5%;
+}
+
+div #nf-field-2-container, .nf-field-container, .email-container, .label-above {			
+	float: left;
+	width: 47.5%;
+	position: none;
+  	padding-left: 5%;
+	clear: none;
+}
+
+#nf-field-3-container {
+	clear:both;
+	width: 95%;
+}
+
+#nf-field-4-container, #nf-field-4-wrap, #nf-field-4, .ninja-forms-filed, nf-element {
+	font-size: 18px;
+	font-family: 'Montserrat';
+	color: #ffffff;
+	float: right;
+	background-color: #45ac9d; 
+	width: 204px;
+	height: 53px;
+}
+
+/** Contact Form Submission Message **/
+
+#nf-form-1-cont {
+	text-align: center;
+}
+
+#nf-form-1-cont > div > div.nf-response-msg > h2
+{
+	color: #45ac9d;
+	font-family: 'Montserrat';
+	font-size: 35px;
 }
 
 
