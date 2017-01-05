@@ -14,6 +14,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
 
 /** Homepage **/
 .home-page {
@@ -31,17 +32,18 @@
 #masthead nav ul {
 	list-style-type: none;
 	margin: 0;
+	
 }
 
 .nav-menu {
 	margin:0;
 }
 
-.nav-menu ul li{
-
+#menu-top-nav {
+	display: inline-block;
 	float:left;
 	margin: 0 30px;
-	text-transform:uppercase;
+	text-transform:uppercase;	
 }
 
 
@@ -187,8 +189,6 @@ div #nf-field-2-container, .nf-field-container, .email-container, .label-above {
 }
 
 /** Contact Us Form Success Message **/ 
-
-
  #content > h3, .success {
 	text-align: center;
 	font-family: 'Montserrat';
@@ -205,6 +205,160 @@ div #nf-field-2-container, .nf-field-container, .email-container, .label-above {
 	padding-bottom: 500px;
 	font-size: 20px;
 }
+
+/** About Page **/ 
+#primary-about {
+	width: 100%;
+    margin: auto;
+    padding: 0;
+}
+	
+.hero-image{
+    background: url("img/taxi-photo.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
+	height: 310px;
+}
+
+#content-about > article > div.hero-area > div > h2 > a {
+	color: #45ac9d;
+}
+
+#content-about > article > div.hero-area > div > h2 {
+    line-height: 1.45;
+    margin-left: 375px;
+    margin-right: 375px;
+    padding-top: 60px;
+    text-align: center;
+    color: white;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#content-about > article > h5 {
+	text-align: center;
+	font-family: 'Montserrat';
+	font-size: 16.5px;
+	margin-left: 375px;
+    margin-right: 375px;
+	text-transform: uppercase;
+}
+
+#content-about > article > p {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	margin-left: 375px;
+    margin-right: 395px;
+}
+
+.services {
+	width: 77%;
+	margin-left: 11%;
+	margin-right: 11%;
+    padding-left: 14%;
+	padding-right: 14%;
+}
+
+.services p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.services h3 {
+	padding-left: 28px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.icon1 {
+	width: 22%;
+	float: left;
+	display: inline-block;
+	padding-top: 25px;
+	padding-bottom: 45px;
+}
+
+.service1 {
+	width: 58%;
+	float: left;
+	display: inline-block;
+	padding-bottom: 45px;	
+}
+
+.service2 {
+	clear: left;
+	width: 58%;
+	float: left;
+	display: inline-block;
+	padding-bottom: 45px;
+	padding-right: 28px;
+}
+
+.icon2 {
+	width: 22%;
+	float: left;
+	display: inline-block;
+	padding-top: 25px;
+	padding-bottom: 45px;
+}
+
+.icon3 {
+	clear: both;
+	float: left;
+	width: 22%;
+	display: inline-block;
+	padding-top: 25px;
+	padding-bottom: 45px;
+}
+
+.service3 {
+	float: left;
+	width: 58%;
+	display: inline-block;
+	padding-bottom: 45px;
+}
+
+.icon4 {
+	float: left;
+	width: 22%;
+	display: inline-block;
+	padding-top: 25px;
+	padding-bottom: 45px;
+}
+
+.service4 {
+	clear: left;
+	width: 58%;
+	float: left;
+	display: inline-block;
+	padding-bottom: 86px;
+	padding-right: 28px;	
+}
+
+.contact-section {
+	clear: both;
+	margin-left:200px;
+	margin-right: 200px;
+	border-top: .1px dotted #e3e1e1;
+}
+
+.contact {
+	display: inline-block;
+	clear: both;
+	float: left; 
+	width: 40%;
+	padding-left: 10%;
+	padding-top: 30px;
+	padding-bottom: 45px;
+}
+
+.site-link {
+	display: inline-block;
+	float: left;
+	width: 30%;
+	padding-right: 12%;
+	padding-top: 65px;
+	padding-bottom: 35px;
+}
+
 
 
 
