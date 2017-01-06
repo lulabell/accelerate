@@ -87,6 +87,8 @@
 
 .blog-post {
 	width: 50%;
+	float: left;
+	display: inline-block;
 }
 
 .blog-post h4 {
@@ -102,12 +104,64 @@
 	font-weight: 700;
 }
 
+.blog-post p {
+	padding-left: 0;
+}
+
 .blog-post .read-more-link {
-	font-size: 24px;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	color: #45ac9d;
 	text-transform: uppercase;
+}
+
+/** Twitter App **/
+.twitter {
+	width: 50%;
+	float: left;
+	display: inline-block;
+	padding-bottom: 150px;
+}
+
+.twitter h3 {
+	padding-left: 20px;
+	padding-top: 14px;
+	font-size: 16px;
+	font-family: 'Montserrat';
+	color: #a6a6a6;
+	text-transform: uppercase;
+}
+
+#pi_simpletwittertweets-2 > ul > li {
+	list-style-type: none;
+	font-size: 16.5px;
+    font-weight: normal;
+}
+
+#text-2 .follow-link {
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	color: #45ac9d;
+	text-transform: uppercase;
+	padding-left: 22px;
+} 
+
+.twitter h3::after { 
+	margin: 22px 0 12px;
+	padding-top: 10px;
+	text-transform: capitalize;
+    content: "@Accelerate \a";
+	display:block;
+	white-space: pre;
+	color: #333;
+	font-size: 24px;
+	font-family: 'Montserrat';
+	font-weight: 700;
+}
+
+.stt-em a {
+	display: none;
 }
 
 /** Case Studies Page **/
@@ -150,13 +204,17 @@ div.case-study-images img {
 
 }
 
+aside.case-study-sidebar p {
+	padding-left: 0;
+}
+
 /** Contact Us Page **/
-#content {
+#content-special {
 	width: 660px;
 	margin-left: 165px;
 }
 
-#content > h2, p {
+#content-special > h2, p {
 padding-left: 30px;
 } 
 
@@ -189,21 +247,22 @@ div #nf-field-2-container, .nf-field-container, .email-container, .label-above {
 }
 
 /** Contact Us Form Success Message **/ 
- #content > h3, .success {
+ #content-success > h3, .success {
 	text-align: center;
 	font-family: 'Montserrat';
 }
 
- #content > h3 {
+ #content-success > h3 {
 	padding-top: 112px;
 	color: #45ac9d;
 	font-size: 35px;
-	 font-weight: 700;
+	font-weight: 700;
 }
 
-#content > .success {
+#content-success > .success {
 	padding-bottom: 500px;
 	font-size: 20px;
+	text-align: center;
 }
 
 /** About Page **/ 
@@ -357,6 +416,62 @@ div #nf-field-2-container, .nf-field-container, .email-container, .label-above {
 	padding-right: 12%;
 	padding-top: 65px;
 	padding-bottom: 35px;
+}
+
+/** 404 Page **/
+
+#content-404 {
+	width: 960px;
+}
+
+div .map-image {
+	margin-top: 45px;
+	padding-top: 58px;
+	padding-right: 3%;
+	padding-left: 8%;
+	width: 25%;
+	content: url("img/map.gif");
+	float: left;
+	display: inline-block;
+}
+
+div .message {
+	margin-top: 45px;
+	padding-top: 25px;
+	padding-left: 2%;
+	width: 50%;
+	float: left;
+	display: inline-block;
+}
+
+.message h2 {
+	color: #45ac9d;
+	padding-left: 30px;
+	font-family: 'Montserrat';
+	font-size: 30px;
+}
+
+#search {
+	clear: both;
+	padding-top: 25px;
+    padding-left: 400px;
+	padding-bottom: 86px;
+}
+
+#searchsubmit {
+	background-color: #45ac9d;
+	color: #fff;
+	width: 155px;
+	font-family: 'Montserrat';
+}
+
+#searchform label {
+	display: none;
+}
+
+#content-404 a {
+	color:#45ac9d;
+	font-weight: bold;
 }
 
 

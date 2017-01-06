@@ -59,6 +59,19 @@ get_header(); ?>
 			<?php wp_reset_query(); ?>
 		</div><!-- .blog-post -->
 	</div><!-- .site-content -->
-</section><!-- .recent-posts -->
+	</section><!-- .recent-posts -->
+
+<section class="twitter-app">
+	<div class="site-content">
+		<div class="twitter">
+			<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+		<div id="secondary" class="widget-area" role="complementary">
+		<?php dynamic_sidebar( 'sidebar-2' ); ?>
+		</div>
+		<?php endif; ?>
+		</div> <!-- twitter -->
+	</div> <!-- site-content -->
+</section> <!-- twitter-app -->
 
 <?php get_footer(); ?>
+
