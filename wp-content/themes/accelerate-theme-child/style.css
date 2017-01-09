@@ -39,9 +39,8 @@
 	margin:0;
 }
 
-#menu-top-nav {
+.site-header .site-navigation {
 	display: inline-block;
-	float:left;
 	margin: 0 30px;
 	text-transform:uppercase;	
 }
@@ -66,7 +65,7 @@
 .individual-featured-work {
     float: left;
     list-style-type: none;
-    margin: 0 5% 0 0;
+    margin: 0 33.5px 0 0;
     width: 31%;
 }
 
@@ -75,6 +74,8 @@
     font-weight: normal;
     margin-top: 24px;
     text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
 }
 
 .individual-featured-work:nth-child(3n) {
@@ -474,6 +475,30 @@ div .message {
 	font-weight: bold;
 }
 
+/** Blog Sidebar **/
+#mc_embed_signup .button {
+	background-color: #45ac9d!important;
+	
+}
+
+#search-2 #searchsubmit {
+	width: auto;
+	border-radius: 4px;
+	height: 32px;
+	margin: 5px 5px 10px 0;
+	padding: 0 22px;
+
+}
+/** Footer **/
+#menu-item-47472 {
+	list-style-type: none;
+	display: inline-block;
+	font-size: 24px;
+	background: ;
+	color: white;
+	border-radius: 50%;
+
+}
 
 
 
