@@ -77,7 +77,6 @@
     float: left;
     list-style-type: none;
     margin: 0 31px 0 0;
-    
 }
 
 .individual-services {
@@ -362,15 +361,14 @@ div .message {
 	height: 32px;
 	margin: 5px 5px 10px 0;
 	padding: 0 22px;
-
 }
+
 /** End Blog Search/Subscribe Button **/
 
 /** About Page **/
 .about-page {
- background: url("img/about-taxi.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
+ 	background: url("img/about-taxi.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
 	height: 282px;
-    
     padding: 100px 0 100px 0;
 }
 
@@ -454,14 +452,30 @@ div .message {
 /** End About Page **/
 
 /** Footer - Social Media Nav **/
-#menu-social-media-nav li{
-	list-style: none;
-	float: right;
-    display: inline-block;
-    padding-right: 18px;
+.social-media-navigation ul {
+  margin: 0;
 }
 
-#menu-social-media-nav li a:hover {
+.social-media-navigation ul li {
+  display: inline-block;
+  background: rgba(0,0,0,0.8);
+  margin: 0px 3px;
+  width: 40px;
+  text-align: center;
+  font-size: 0.7rem;
+  border-radius: 100%; 
+  -webkit-border-radius: 100%; 
+  -moz-border-radius: 100%;
+}
+
+.social-media-navigation ul li a {
+     top: initial;
+     display: block;
+     padding: 10px 0;
+     color: white;
+}
+
+.social-media-navigation ul li a:hover {
 	color: #45ac9d;
 }
 
@@ -469,3 +483,5 @@ div .message {
 	color: #45ac9d;
 }
 /** End Footer - Social Media Nav **/
+
+

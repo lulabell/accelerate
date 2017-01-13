@@ -16,12 +16,8 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="site-info">
 				<div class="site-description">
-				<?php if (!empty(get_theme_mod('accelerate_footer_message'))){ 
-								
-								do_action('modified_footer', 'green_accelerate_footer'); ?>
-						<p class="footer-desc"><a href="<?php echo home_url(); ?>"><span class="main-color"><?php bloginfo( 'name' ); ?></span> <?php bloginfo('description'); ?></a></p>
-					<?php } ?>
-					<p class="footer-copy">&copy; <?php echo date("Y"); ?> <?php bloginfo('title'); ?>, LLC </p>
+					<p><?php bloginfo('description'); ?></p>
+					<p>&copy; <?php bloginfo('title'); ?>, LLC
 				</div>
 				
 				
