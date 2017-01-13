@@ -3,3 +3,4 @@
 wp-config.php
 .htaccess
 wp-content/uploads/
+wp-content/upgrade/
