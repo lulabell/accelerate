@@ -9,102 +9,123 @@
 
 get_header(); ?>
 
-	<div id="primary-about" class="site-content">
-		<div id="content-about" role="main">
-<?php while ( have_posts() ) : the_post();
-	$heading = get_field('heading');
-	$services = get_field('services');
-	$serdescript = get_field('services_description');
-	$icon1 = get_field('icon_1');
-	$service1 = get_field('service_1');
-	$serdescript1 = get_field('service_1_description');
-	$icon2 = get_field('icon_2');
-	$service2 = get_field('service_2');
-	$serdescript2 = get_field('service_2_description');
-	$icon3 = get_field('icon_3');
-	$service3 = get_field('service_3');
-	$serdescript3 = get_field('service_3_description');	
-	$icon4 = get_field('icon_4');
-	$service4 = get_field('service_4');
-	$serdescript4 = get_field('service_4_description');
-	$contact = get_field('contact');
-	$link = get_field('site_link');
+<section class="about-page">
+	<div class="about-container">
+		<?php while ( have_posts() ) : the_post(); ?>
+			<div class='about-hero'>
+				<?php the_content(); ?>
+				<h2><a class="about-name" href="<?php echo home_url(); ?>/blog">Accelerate</a> is a strategy and marketing agency located in the heart of NYC. Our goal is to build businesses by making our clients visible and making their customers smile.</h2>
+			</div>
+		<?php endwhile; // end of the loop. ?>
+	</div><!-- .about-container -->
+</section><!-- .about-page -->
+
+<div id="primary-about-services" class="site-content">
+		<div id="content-about-services" role="main">
+<?php query_posts('posts_per_page=5&post_type=our_services'); ?>
+<?php while (have_posts() ) : the_post(); 
+	$intro = get_field('service_intro_title');
+	$introdescrip = get_field('service_intro_description');
+	$servicetitle1 = get_field('service_title1');
+	$servicedescrip1 = get_field('service_description1');
+	$icon1 = get_field('icon1');
+	$servicetitle2= get_field('service_title2');
+	$servicedescrip2 = get_field('service_description2');
+	$icon2 = get_field('icon2');
+	$servicetitle3= get_field('service_title3');
+	$servicedescrip3 = get_field('service_description3');
+	$icon3 = get_field('icon3');
+	$servicetitle4= get_field('service_title4');
+	$servicedescrip4 = get_field('service_description4');
+	$icon4 = get_field('icon4');
+	$contact = get_field('service_contact');
+	$servicelink = get_field('site_link');
 	$size = "full";
 			?>
-	<article class="about-page">
-		<div class="hero-area">
-			<div class="hero-image">
- 			<?php the_content(); ?>
-				<h2><a class="url" href="<?php echo home_url(); ?>">Accelerate</a>
-				<?php echo $heading; ?></h2>
-			</div> <!--hero-image -->
-			
-		</div><!-- hero-area -->
-			
-		<h5><?php echo $services; ?></h5>
-			<p><?php echo $serdescript; ?></p>
 		
-	<section class="services">
-		<div id="one">
-			<div class="icon1">
-				<?php if($icon1) { 
+<div id="our-services">
+	
+	<section class="service-intro">
+			<h5><?php echo $intro; ?></h5>
+			<p><?php echo $introdescrip; ?></p>
+	</section> <!-- service-intro -->
+	
+	<section class="about-service">
+		<div class="service-icon left">
+			<?php if($icon1) { 
 					echo wp_get_attachment_image( $icon1, $size );
 					} ?>
-			</div> <!-- icon1 -->
-			<div class="service1">	
-				<h3><?php echo $service1; ?></h3>
-					<p><?php echo $serdescript1; ?></p>
-			</div> <!-- service1 -->
-		</div> <!-- one -->
-		<div id="two">
-			<div class="service2">
-				<h3><?php echo $service2; ?></h3>
-					<p><?php echo $serdescript2; ?></p>
-			</div> <!-- service2 -->
-			<div class="icon2">
-				<?php if($icon2) { 
+		</div> <!--service-icon -->
+		<div class="service-description">
+			<h2><?php echo $servicetitle1; ?></h2>
+					<p><?php echo $servicedescrip1; ?></p>
+		</div> <!--service-description -->
+	</section><!-- about-service -->
+	
+	<section class="about-service">
+		<div class="service-icon right">
+			<?php if($icon2) { 
 					echo wp_get_attachment_image( $icon2, $size );
 					} ?>
-			</div> <!-- icon2 -->
-			</div> <!-- two -->
-		<div id="three">
-			<div class="icon3">
-				<?php if($icon3) { 
+		</div> <!--service-icon -->
+		<div class="service-description even">
+			<h2><?php echo $servicetitle2; ?></h2>
+					<p><?php echo $servicedescrip2; ?></p>
+		</div> <!--service-description -->
+	</section><!-- about-service -->
+	
+	<section class="about-service">
+		<div class="service-icon left">
+			<?php if($icon3) { 
 					echo wp_get_attachment_image( $icon3, $size );
 					} ?>
-			</div> <!-- icon3 -->
-			<div class="service3">
-				<h3><?php echo $service3; ?></h3>
-					<p><?php echo $serdescript3; ?></p>
-			</div> <!-- service3 -->
-		</div><!-- three -->
-		<div id="four">
-			<div class="service4">
-				<h3><?php echo $service4; ?></h3>
-					<p><?php echo $serdescript4; ?></p>
-			</div> <!-- service4 -->
-			<div class="icon4">
-				<?php if($icon4) { 
+		</div> <!--service-icon -->
+		<div class="service-description">
+			<h2><?php echo $servicetitle3; ?></h2>
+					<p><?php echo $servicedescrip3; ?></p>
+		</div> <!--service-description -->
+	</section><!-- about-service -->
+	
+	<section class="about-service">
+		<div class="service-icon right">
+			<?php if($icon4) { 
 					echo wp_get_attachment_image( $icon4, $size );
 					} ?>
-			</div> <!-- icon4 -->
-		</div> <!-- four -->
-	</section> <!--services-->
-		<div class="contact-section">
-			<div class="contact">
-				<h3><?php echo $contact; ?></h3>
-			</div> <!-- contact -->
-			<div class="site-link">
-				<p><a class="button" href="<?php echo $link; ?>">Contact Us</a></p>
-			</div> <!--site-link -->
-		</div> <!-- contact-section -->
-	</article>
+		</div> <!--service-icon -->
+		<div class="service-description even">
+			<h2><?php echo $servicetitle4; ?></h2>
+					<p><?php echo $servicedescrip4; ?></p>
+		</div> <!--service-description -->
+	</section><!-- about-service -->
+</div> <!-- our-services-->
 			
-<?php the_content(); ?>
-			<?php endwhile; // end of the loop. ?>
+	<section class="contact-section">
+		<div class="service-contact">
+				<h4><?php echo $contact; ?></h4>
+		</div> <!-- contact -->
+		<div class="service-site-link">
+				<a class="button" href="<?php echo $servicelink; ?>">Contact Us</a>
+		</div> <!--site-link -->
+	</section> <!-- contact-section -->		
+	
+			
+<?php the_content(); ?>			
+<?php endwhile; // end of the loop. ?>			
+	</div> <!-- content-about -->
+</div> <!--primary-about"-->
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+
+
+
+
 
 
 <?php get_footer(); ?>
+	
+		
+		
+			
+				
+		
+	
+			

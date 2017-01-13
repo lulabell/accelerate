@@ -32,7 +32,6 @@
 #masthead nav ul {
 	list-style-type: none;
 	margin: 0;
-	
 }
 
 .nav-menu {
@@ -40,36 +39,54 @@
 }
 
 .site-header .site-navigation {
-	display: inline-block;
 	margin: 0 30px;
 	text-transform:uppercase;	
 }
 
+.site-header .site-navigation ul li {
+	float: left;
+	padding-right: 32px;
+	overflow: auto;
+}
 
-/** Featured Work on Home Page **/
+/** End Homepage **/
+
+/** Featured Work/Our Services on Home Page **/
 .featured-work {
 	overflow:auto;
 }
 
-.featured-work h4 {
+.featured-our-services {
+	overflow: auto;
+	padding-top: 72px;
+	padding-bottom: 65px;
+}
+
+.featured-work h4, .featured-our-services h4 {
 	font-family'Montserrat';
 	text-transform: uppercase;
 	text-align:center;
 	margin:0 0 40px;
 }
 
-.featured-work ul {
+.featured-work ul, .featured-our-services ul {
 	margin:0;
 }
 
 .individual-featured-work {
     float: left;
     list-style-type: none;
-    margin: 0 33.5px 0 0;
-    width: 31%;
+    margin: 0 31px 0 0;
+    
 }
 
-.individual-featured-work h3 {
+.individual-services {
+	float: left;
+	list-style-type: none;
+	margin: 0 24px 0 0 ;
+}
+
+.individual-featured-work h3, .individual-services h3 {
     font-size: 18px;
     font-weight: normal;
     margin-top: 24px;
@@ -82,10 +99,15 @@
     margin: 0;
     width: 31%;
 }
+
+.individual-services:nth-child(4n) {
+	margin: 0;
+	width: 25%;
+}
 	
+/** End Featured Work/Services **/
 
 /** Home-page Blog-Post **/
-
 .blog-post {
 	width: 50%;
 	float: left;
@@ -115,16 +137,17 @@
 	color: #45ac9d;
 	text-transform: uppercase;
 }
+/** End Blog Post **/
 
 /** Twitter App **/
-.twitter {
+.twitter-module {
 	width: 50%;
 	float: left;
 	display: inline-block;
 	padding-bottom: 150px;
 }
 
-.twitter h3 {
+.twitter-module h3 {
 	padding-left: 20px;
 	padding-top: 14px;
 	font-size: 16px;
@@ -148,7 +171,7 @@
 	padding-left: 22px;
 } 
 
-.twitter h3::after { 
+.twitter-module h3::after { 
 	margin: 22px 0 12px;
 	padding-top: 10px;
 	text-transform: capitalize;
@@ -164,6 +187,8 @@
 .stt-em a {
 	display: none;
 }
+
+/** End Twitter App **/
 
 /** Case Studies Page **/
 article.case-study {
@@ -183,7 +208,6 @@ aside.case-study-sidebar h5{
 	font-weight: normal;
 	line-height: 1.33333;
 	margin: 0 0 12px;
-
 }
 
 aside.case-study-sidebar h6{
@@ -191,7 +215,6 @@ aside.case-study-sidebar h6{
 	font-weight: normal;
 	line-height: 1.5;
 	margin: 0 0 50px;
-
 }
 
 div.case-study-images {
@@ -202,12 +225,13 @@ div.case-study-images {
 div.case-study-images img {
 	margin-bottom: 50px;
 	border: 1px solid #cccccc;
-
 }
 
 aside.case-study-sidebar p {
 	padding-left: 0;
 }
+
+/** End Case Studies **/
 
 /** Contact Us Page **/
 #content-special {
@@ -247,7 +271,9 @@ div #nf-field-2-container, .nf-field-container, .email-container, .label-above {
 	height: 53px;
 }
 
-/** Contact Us Form Success Message **/ 
+/** End Contact Us Form **/
+
+/** Contact Us Form-Success Message **/ 
  #content-success > h3, .success {
 	text-align: center;
 	font-family: 'Montserrat';
@@ -266,161 +292,9 @@ div #nf-field-2-container, .nf-field-container, .email-container, .label-above {
 	text-align: center;
 }
 
-/** About Page **/ 
-#primary-about {
-	width: 100%;
-    margin: auto;
-    padding: 0;
-}
-	
-.hero-image{
-    background: url("img/taxi-photo.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
-	height: 310px;
-}
-
-#content-about > article > div.hero-area > div > h2 > a {
-	color: #45ac9d;
-}
-
-#content-about > article > div.hero-area > div > h2 {
-    line-height: 1.45;
-    margin-left: 375px;
-    margin-right: 375px;
-    padding-top: 60px;
-    text-align: center;
-    color: white;
-	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
-}
-
-#content-about > article > h5 {
-	text-align: center;
-	font-family: 'Montserrat';
-	font-size: 16.5px;
-	margin-left: 375px;
-    margin-right: 375px;
-	text-transform: uppercase;
-}
-
-#content-about > article > p {
-	text-align: center;
-	font-family: 'Open Sans', sans-serif;
-	margin-left: 375px;
-    margin-right: 395px;
-}
-
-.services {
-	width: 77%;
-	margin-left: 11%;
-	margin-right: 11%;
-    padding-left: 14%;
-	padding-right: 14%;
-}
-
-.services p {
-	font-family: 'Open Sans', sans-serif;
-}
-
-.services h3 {
-	padding-left: 28px;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 25px;
-	font-weight: 600;
-}
-
-.icon1 {
-	width: 22%;
-	float: left;
-	display: inline-block;
-	padding-top: 25px;
-	padding-bottom: 45px;
-}
-
-.service1 {
-	width: 58%;
-	float: left;
-	display: inline-block;
-	padding-bottom: 45px;	
-}
-
-.service2 {
-	clear: left;
-	width: 58%;
-	float: left;
-	display: inline-block;
-	padding-bottom: 45px;
-	padding-right: 28px;
-}
-
-.icon2 {
-	width: 22%;
-	float: left;
-	display: inline-block;
-	padding-top: 25px;
-	padding-bottom: 45px;
-}
-
-.icon3 {
-	clear: both;
-	float: left;
-	width: 22%;
-	display: inline-block;
-	padding-top: 25px;
-	padding-bottom: 45px;
-}
-
-.service3 {
-	float: left;
-	width: 58%;
-	display: inline-block;
-	padding-bottom: 45px;
-}
-
-.icon4 {
-	float: left;
-	width: 22%;
-	display: inline-block;
-	padding-top: 25px;
-	padding-bottom: 45px;
-}
-
-.service4 {
-	clear: left;
-	width: 58%;
-	float: left;
-	display: inline-block;
-	padding-bottom: 86px;
-	padding-right: 28px;	
-}
-
-.contact-section {
-	clear: both;
-	margin-left:200px;
-	margin-right: 200px;
-	border-top: .1px dotted #e3e1e1;
-}
-
-.contact {
-	display: inline-block;
-	clear: both;
-	float: left; 
-	width: 40%;
-	padding-left: 10%;
-	padding-top: 30px;
-	padding-bottom: 45px;
-}
-
-.site-link {
-	display: inline-block;
-	float: left;
-	width: 30%;
-	padding-right: 12%;
-	padding-top: 65px;
-	padding-bottom: 35px;
-}
+/** End Success Message **/
 
 /** 404 Page **/
-
 #content-404 {
 	width: 960px;
 }
@@ -475,10 +349,11 @@ div .message {
 	font-weight: bold;
 }
 
-/** Blog Sidebar **/
+/** End 404 Page **/
+
+/** Blog Sidebar - Search/Subscribe **/
 #mc_embed_signup .button {
 	background-color: #45ac9d!important;
-	
 }
 
 #search-2 #searchsubmit {
@@ -489,17 +364,108 @@ div .message {
 	padding: 0 22px;
 
 }
-/** Footer **/
-#menu-item-47472 {
-	list-style-type: none;
-	display: inline-block;
-	font-size: 24px;
-	background: ;
-	color: white;
-	border-radius: 50%;
+/** End Blog Search/Subscribe Button **/
 
+/** About Page **/
+.about-page {
+ background: url("img/about-taxi.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
+	height: 282px;
+    
+    padding: 100px 0 100px 0;
 }
 
+.about-hero h2 {
+    color: white;
+    font-family: "open sans";
+    font-size: 25px;
+	line-height: 1.5;
+    font-weight: normal;
+   	margin: 80px 165px 80px 165px;
+	padding: 0 220px 0 220px;
+	text-align:center;
+}
 
+.about-hero a {
+	color: #45ac9d;
+}
 
+.service-intro h5 {
+	font-family: 'Montserrat';
+	font-size: 16.5px;
+    text-transform: uppercase;
+    text-align: center;
+}
 
+.service-intro p {
+	width: 55%;
+    text-align: center;
+    padding-left: 220px;
+}
+
+.service-description {
+	width: 63%;
+	float: left;
+	display: inline-block;
+}
+
+.even {
+	padding-left: 88px;
+}
+
+.service-description h2 {
+	padding-left: 28px;
+}
+
+.service-icon {
+	width: 22%;
+	padding-top: 25px;
+	padding-bottom: 65px;
+}
+
+.left {
+	float: left;
+	clear: both;
+	display: inline-block;
+	margin-right: 36px;
+	padding-left: 88px;
+}
+
+.right {
+	float: right;
+	clear:both;
+	display:inline-block;
+	margin-left: 36px;
+}
+
+.contact-section {
+	clear: both;
+	border-top: .1px dotted #e3e1e1;
+	text-align: center;
+}
+	
+.service-contact  {
+	display: inline-block;
+	padding: 30px 32px 20px 0;
+}
+
+.service-site-link {
+	display: inline-block;
+}
+/** End About Page **/
+
+/** Footer - Social Media Nav **/
+#menu-social-media-nav li{
+	list-style: none;
+	float: right;
+    display: inline-block;
+    padding-right: 18px;
+}
+
+#menu-social-media-nav li a:hover {
+	color: #45ac9d;
+}
+
+.main-color {
+	color: #45ac9d;
+}
+/** End Footer - Social Media Nav **/

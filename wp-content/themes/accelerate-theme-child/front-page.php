@@ -46,6 +46,54 @@ get_header(); ?>
 	</div><!-- site-content -->
 </section><!-- featured-work -->
 
+<section class="featured-our-services">
+	<div class="site-content">
+		<h4>Our Services</h4>
+		<ul class="homepage-our-services">
+		<?php query_posts('posts_per_page=4&post_type=our_services'); ?>
+				<?php while (have_posts() ) : the_post();
+					$servicetitle1 = get_field('service_title1');
+					$servicetitle2 = get_field('service_title2');
+					$servicetitle3 = get_field('service_title3');
+					$servicetitle4 = get_field('service_title4');
+					$icon1 = get_field("icon1");
+					$icon2 = get_field("icon2");
+					$icon3 = get_field("icon3");
+					$icon4 = get_field("icon4");
+					$size ="medium";
+		?>
+				<li class="individual-services">
+					<figure>
+						<?php echo wp_get_attachment_image($icon1, $size); ?>
+					</figure>
+					<h3><a href="<?php the_permalink(); ?>about"><?php echo $servicetitle1; ?></a></h3>
+				</li>
+				<li class="individual-services">
+					<figure>
+						<?php echo wp_get_attachment_image($icon2, $size); ?>
+					</figure>
+					<h3><a href="<?php the_permalink(); ?>about"><?php echo $servicetitle2; ?></a></h3>
+				</li>
+				<li class="individual-services">
+					<figure>
+						<?php echo wp_get_attachment_image($icon3, $size); ?>
+					</figure>
+					<h3><a href="<?php the_permalink(); ?>about"><?php echo $servicetitle3; ?></a></h3>
+				</li>
+				<li class="individual-services">
+					<figure>
+						<?php echo wp_get_attachment_image($icon4, $size); ?>
+					</figure>
+					<h3><a href="<?php the_permalink(); ?>about"><?php echo $servicetitle4; ?></a></h3>
+				</li>			
+				<?php endwhile; ?>
+			<?php wp_reset_query(); ?>
+		</ul>	
+	</div><!-- site-content -->
+</section><!-- our-services -->
+
+
+
 <section class="recent-posts">
 	<div class="site-content">
 		<div class="blog-post">
@@ -63,7 +111,7 @@ get_header(); ?>
 
 <section class="twitter-app">
 	<div class="site-content">
-		<div class="twitter">
+		<div class="twitter-module">
 			<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
 		<div id="secondary" class="widget-area" role="complementary">
 		<?php dynamic_sidebar( 'sidebar-2' ); ?>

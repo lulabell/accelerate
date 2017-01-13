@@ -220,18 +220,38 @@ class NF_Abstracts_Model
         // If the ID is not set, then we cannot pull settings from the Database.
         if( ! $this->_id ) return $this->_settings;
 
-        $form_cache = get_option( 'nf_form_' . $this->_parent_id );
-        if( $form_cache ){
+        if( ! $this->_settings && 'field' == $this->_type ) {
+            global $wpdb;
+            $results = $wpdb->get_results(
+                "
+                SELECT Meta.key, Meta.value
+                FROM $this->_table_name as Object
+                JOIN $this->_meta_table_name as Meta
+                ON Object.id = Meta.parent_id
+                WHERE Object.id = '$this->_id'
+                "
+            , ARRAY_A );
 
-            if( 'field'== $this->_type ) {
+            foreach( $results as $result ) {
+                $key = $result[ 'key' ];
+                $this->_settings[ $key ] = $result[ 'value' ];
+            }
+        }
 
-                if (isset($form_cache[ 'fields' ])) {
+        if( ! $this->_settings ) {
+            $form_cache = get_option('nf_form_' . $this->_parent_id);
+            if ($form_cache) {
 
-                    foreach ($form_cache[ 'fields' ] as $object) {
-                        if ($this->_id != $object[ 'id' ]) continue;
+                if ('field' == $this->_type) {
 
-                        $this->update_settings($object['settings']);
-                        break;
+                    if (isset($form_cache['fields'])) {
+
+                        foreach ($form_cache['fields'] as $object) {
+                            if ($this->_id != $object['id']) continue;
+
+                            $this->update_settings($object['settings']);
+                            break;
+                        }
                     }
                 }
             }

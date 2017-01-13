@@ -16,9 +16,14 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="site-info">
 				<div class="site-description">
-				<p><?php bloginfo('description'); ?></p>
-				<p>&copy; <?php bloginfo('title'); ?>, LLC
+				<?php if (!empty(get_theme_mod('accelerate_footer_message'))){ 
+								
+								do_action('modified_footer', 'green_accelerate_footer'); ?>
+						<p class="footer-desc"><a href="<?php echo home_url(); ?>"><span class="main-color"><?php bloginfo( 'name' ); ?></span> <?php bloginfo('description'); ?></a></p>
+					<?php } ?>
+					<p class="footer-copy">&copy; <?php echo date("Y"); ?> <?php bloginfo('title'); ?>, LLC </p>
 				</div>
+				
 				
 			<nav class="social-media-navigation" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'social-media', 'menu_class' => 'social-media-menu' ) ); ?>
