@@ -12,8 +12,8 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 		<div id="content-404" class="site-content" role="main">
-			<div class="page-wrapper">
-				<div class="map-image"></div><!-- map-image -->
+			<div class="404-page-wrapper">
+				<figure class="map-image"></figure><!-- map-image -->
 				<div class="message">
 					<h2>Whoops, Took a Wrong Turn…</h2>
 

@@ -38,12 +38,8 @@
 	margin:0;
 }
 
-.site-header .site-navigation {
-	margin: 0 30px;
-	text-transform:uppercase;	
-}
-
 .site-header .site-navigation ul li {
+	text-transform: uppercase;
 	float: left;
 	padding-right: 32px;
 	overflow: auto;
@@ -298,13 +294,12 @@ div #nf-field-2-container, .nf-field-container, .email-container, .label-above {
 	width: 960px;
 }
 
-div .map-image {
+.map-image::after {
 	margin-top: 45px;
-	padding-top: 58px;
-	padding-right: 3%;
+	padding-top: 60px;
 	padding-left: 8%;
 	width: 25%;
-	content: url("img/map.gif");
+	content: url("img/map.gif");;
 	float: left;
 	display: inline-block;
 }
@@ -312,7 +307,6 @@ div .map-image {
 div .message {
 	margin-top: 45px;
 	padding-top: 25px;
-	padding-left: 2%;
 	width: 50%;
 	float: left;
 	display: inline-block;
@@ -328,7 +322,7 @@ div .message {
 #search {
 	clear: both;
 	padding-top: 25px;
-    padding-left: 400px;
+    padding-left: 350px;
 	padding-bottom: 86px;
 }
 
