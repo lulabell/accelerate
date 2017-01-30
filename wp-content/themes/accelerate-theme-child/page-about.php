@@ -14,7 +14,7 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<div class='about-hero'>
 				<?php the_content(); ?>
-				<h2><a class="about-name" href="<?php echo home_url(); ?>/blog">Accelerate</a> is a strategy and marketing agency located in the heart of NYC. Our goal is to build businesses by making our clients visible and making their customers smile.</h2>
+				<h2><a class="about-name" href="<?php echo home_url(); ?>">Accelerate</a> is a strategy and marketing agency located in the heart of NYC. Our goal is to build businesses by making our clients visible and making their customers smile.</h2>
 			</div>
 		<?php endwhile; // end of the loop. ?>
 	</div><!-- .about-container -->
