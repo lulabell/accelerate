@@ -67,81 +67,19 @@ function accelerate_theme_child_widget_init() {
 }
 add_action( 'widgets_init', 'accelerate_theme_child_widget_init' );
 
-//link to mobile.css - may want to delete and add media queries to bottom of style.css instead
+//Link to mobile.css - may want to delete and add media queries to bottom of style.css instead
 function custom_style_sheet() {
 wp_enqueue_style( 'mobile', get_stylesheet_directory_uri() . '/mobile.css' );
 }
 add_action('wp_enqueue_scripts', 'custom_style_sheet');
 
-//change login logo, background,form, removed back to site link
-function my_login_logo() { ?>
-    <style type="text/css">
-        #login h1 a, .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/accelerate-logo.png);
-            padding-bottom: 30px;
-        }
-		#login h1 a:hover, .login h1 a:hover {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/accelerate-reverse-logo.png);
-		}
-		body.login { background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/taxi-photo.jpg);
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			 background-size: cover;
-			 position:fixed;
-			 top:0;
-			 left:0;
-			 z-index:10;
-			 overflow: hidden;
-			 width: 100%;
-			 height:100%;
-		}
-		body.login div#login p#nav a,
-		body.login  {
-    		color: #45ac9d !important; /* Accelerate link color. */
-		}
-		body.login div#login p#nav a:hover,
-		body.login {
-    		color: #fff !important; /* Accelerate link color. */
-		}
-		
-		body.login div#login form#loginform  { 		
-			background-color:rgba(255,255,255,0.4);
-			border-radius: 5%;
-		}
-		#loginform > p label {
-			color: #fff;
-		}
+// Load CSS for custom login page 
+function accelerate_custom_login() {
+   wp_enqueue_style( 'login_styles', get_stylesheet_directory_uri() . '/login/custom-login-styles.css' );
+}
+add_action( 'login_enqueue_scripts', 'accelerate_custom_login');
 
-		#wp-submit {
-			background: #45ac9d;
-			border-color: #3e9a8d #30786d #30786d;
-			-webkit-box-shadow: 0 1px 0 #30786d;
-			box-shadow: 0 1px 0 #30786d;
-			text-shadow: 0 -1px 1px #30786d, 1px 0 1px #30786d, 0 1px 1px #30786d, -1px 0 1px #30786d;
-		}
-		#wp-submit:hover {
-			background: #57b4a6;
-		}
-		#backtoblog {
-    		display: none;
-		}
-		
-		.login #login_error, p.message {
-			text-align: center;
-			font-weight: 600;
-			color:#14332f;
-			border-left-color: #45ac9d !important;
-			background-color: #FFE83C !important;
-		}
-		
-		
-		
-    </style>
-<?php }
-add_action( 'login_enqueue_scripts', 'my_login_logo' );
-
-//change logo link value from WP site to accelerate site
+//Change Login Logo Link Value from WP Site to Accelerate Site
 function my_login_logo_url() {
     return home_url();
 }
@@ -152,7 +90,7 @@ function my_login_logo_url_title() {
 }
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
-//change wp admin login error message
+//Change WP Admin Login Error Message
 function login_error_override()
 {
     return 'Hmm...looks like either your username or password is incorrect.<br/> Are you sure you belong here?';

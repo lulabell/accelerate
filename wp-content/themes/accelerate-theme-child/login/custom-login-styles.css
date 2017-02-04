@@ -1,0 +1,76 @@
+/*
+ Theme Name:   Accelerate Theme Child
+ Theme URI:    http://example.com/accelerate-theme-child/
+ Description:  Accelerate Child Theme - Accelerate
+ Author:       Your Name!
+ Author URI:   http://example.com
+ Template:     accelerate-theme
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  accelerate-theme-child
+*/
+
+#login h1 a, .login h1 a {
+   background-image: url('../img/accelerate-logo.png');
+    padding-bottom: 30px;
+ }
+
+#login h1 a:hover, .login h1 a:hover {
+ 	background-image: url('../img/accelerate-reverse-logo.png');
+}
+
+body.login { 
+	background-image: url('../img/taxi-photo.jpg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:10;
+	overflow: hidden;
+	width: 100%;
+	height:100%;
+}
+
+body.login div#login p#nav a, body.login  {
+    color: #45ac9d !important; /* Accelerate link color. */
+}
+
+body.login div#login p#nav a:hover, body.login {
+    color: #fff !important; /* Accelerate link color. */
+}
+		
+body.login div#login form#loginform  { 		
+	background-color:rgba(255,255,255,0.4);
+	border-radius: 5%;
+}
+
+#loginform > p label {
+	color: #fff;
+}
+
+#wp-submit {
+	background: #45ac9d;
+	border-color: #3e9a8d #30786d #30786d;
+	-webkit-box-shadow: 0 1px 0 #30786d;
+	box-shadow: 0 1px 0 #30786d;
+	text-shadow: 0 -1px 1px #30786d, 1px 0 1px #30786d, 0 1px 1px #30786d, -1px 0 1px #30786d;
+}
+
+#wp-submit:hover {
+	background: #57b4a6;
+}
+	
+#backtoblog {
+    display: none;
+}
+
+.login #login_error, .login .message {
+	text-align: center;
+	font-weight: 600;
+	color:#14332f;
+	border-left-color: #45ac9d !important;
+	background-color: #FFE83C !important;
+}
